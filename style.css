@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.container {
+    padding: 10px;
+}
+
+.nav {
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: auto 12.5% 12.5% 0%;
+    text-align: center;
+    grid-template-rows: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.title {
+    text-align: left;
+}
+
+.title .container {
+}
+
+.blogs {
+    display: grid;
+    margin-top: 1%;
+    grid-template-columns: 50% 50%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+.mobile_button {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .mobile_button {
+        display: block;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .title .container {
+        padding-left: 0%;
+    }
+
+    .nav {
+        grid-template-columns: 75% auto;
+    }
+
+    .blogs {
+        width: 100%;
+        margin: 0%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .blogs {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        grid-template-columns: auto;
+    }
+
+}
