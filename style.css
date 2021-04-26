@@ -1,20 +1,22 @@
 body {
     font-family: 'Roboto Mono', sans-serif;
+    color: #2e3440;
 }
 
 .container {
     padding: 10px;
 }
 
-.about {
-    background-color: #000000;
-    color: #EEEEEE;
+.title {
+    background-color: #2e3440;
+    color: #8FBCBB;
+    text-align: left;
 }
 
 .nav {
     font-size: 25px;
     display: grid;
-    grid-template-columns: auto 12.5% 12.5% 0%;
+    grid-template-columns: auto 0.2fr 0.2fr;
     text-align: center;
     grid-template-rows: auto;
     position: -webkit-sticky;
@@ -30,15 +32,8 @@ body {
 }
 
 a {
-    color: black;
+    color: #2e3440;
     text-decoration: none;
-}
-
-.title {
-    text-align: left;
-}
-
-.title .container {
 }
 
 .blogs {
@@ -49,25 +44,10 @@ a {
     margin-right: 12.5%;
 }
 
-.mobile_button {
-    display: none;
-}
-
-@media screen and (max-width: 1200px) {
-    .mobile_button {
-        display: block;
-    }
-
-    .about {
-        display: none;
-    }
-
-    .contact {
-        display: none;
-    }
-
+@media screen and (max-width: 1000px) {
     .title {
         text-align: center;
+        grid-column: 1/4;
     }
 
     .title .container {
@@ -75,17 +55,13 @@ a {
     }
 
     .nav {
-        grid-template-columns: 75% auto;
+        grid-template-columns: 50% 50%;
     }
 
     .blogs {
         width: 100%;
         margin: 0%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .blogs {
+        margin-top: 2%;
         grid-template-columns: auto;
     }
 }
