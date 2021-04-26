@@ -6,6 +6,11 @@ body {
     padding: 10px;
 }
 
+.about {
+    background-color: #000000;
+    color: #EEEEEE;
+}
+
 .nav {
     font-size: 25px;
     display: grid;
