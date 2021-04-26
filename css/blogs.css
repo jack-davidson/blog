@@ -1,9 +1,8 @@
 .blogs {
-    display: grid;
-    margin-top: 1%;
-    grid-template-columns: 50% 50%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    margin-top: 2%;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .blogs .card {
@@ -16,6 +15,5 @@
         margin-top: 2%;
         margin-left: auto;
         margin-right: auto;
-        grid-template-columns: auto;
     }
 }
