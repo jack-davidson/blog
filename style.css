@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto Mono', sans-serif;
-    color: #2e3440;
+    color: #2E3440;
 }
 
 .container {
@@ -8,9 +8,11 @@ body {
 }
 
 .title {
-    background-color: #2e3440;
-    color: #8FBCBB;
     text-align: left;
+}
+
+.nav .card {
+    background-color: #2E3440;
 }
 
 .nav {
@@ -26,14 +28,19 @@ body {
 }
 
 .card {
+    color: #8FBCBB;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
     margin: 5px;
 }
 
 a {
-    color: #2e3440;
+    color: #2E3440;
     text-decoration: none;
+}
+
+.blogs .card {
+    color: #2E3440
 }
 
 .blogs {
@@ -44,7 +51,18 @@ a {
     margin-right: 12.5%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+    .blogs {
+        width: 90%;
+        margin: 0%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
     .title {
         text-align: center;
         grid-column: 1/4;
@@ -57,18 +75,4 @@ a {
     .nav {
         grid-template-columns: 50% 50%;
     }
-
-    .blogs {
-        width: 100%;
-        margin: 0%;
-        margin-top: 2%;
-        grid-template-columns: auto;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .nav {
-        grid-template-columns: auto;
-    }
-
 }
