@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jack-davidson/blog/issues"
   },
-  "homepage": "https://github.com/jack-davidson/blog#readme"
+  "homepage": "https://github.com/jack-davidson/blog#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

@@ -1,21 +1,20 @@
 #!/usr/bin/env node
-const http = require('http');
+const express = require('express');
 const fs = require('fs');
-const querystring = require('querystring');
+const pug = require('pug');
 
+const server = express();
+
+const port = 8000;
 const hostname = 'localhost';
-const port = '8000';
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    if (req.url == '/blog') {
-        fs.readFile('blogs.json', (err, data) => {
-            res.end(JSON.stringify(JSON.parse(data)));
-        });
-    }
+server.get('/blog/:id', (req, res) => {
+    fs.readFile('blogs.json', 'utf8', (err, data) => {
+        res.type('json');
+        res.send(JSON.parse(data)[req.params['id']]);
+    });
 });
 
 server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`blog listening at http://${hostname}:${port}`);
 });
