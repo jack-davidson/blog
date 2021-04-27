@@ -1,12 +1,12 @@
 .nav {
     font-size: 25px;
+    /*top: 0;*/
     display: grid;
     grid-template-columns: auto 0.2fr 0.2fr;
     text-align: center;
     grid-template-rows: auto;
     position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    /*position: sticky;*/
     background-color: #FFFFFF;
 }
 

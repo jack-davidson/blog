@@ -1,6 +1,7 @@
 [
     {
-        "title": "hello",
-        "body": "hello, this is a blog"
+        "title": "Welcome to my Blog!",
+        "body": "hello, this is a blog",
+        "date": "April 27, 2021"
     }
 ]
