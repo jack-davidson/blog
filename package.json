@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "simple personal blog CMS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack-davidson/blog.git"
+  },
+  "keywords": [
+    "blog",
+    "cms"
+  ],
+  "author": "Jack Davidson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jack-davidson/blog/issues"
+  },
+  "homepage": "https://github.com/jack-davidson/blog#readme"
+}
