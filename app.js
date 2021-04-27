@@ -11,7 +11,7 @@ app.set(STATIC_DIR, __dirname + '/' + STATIC_DIR);
     
 app.set('view engine', 'ejs');
 
-const port = 8000;
+const port = 3000;
 const hostname = 'localhost';
 
 app.get('/', (_, res) => {
