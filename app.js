@@ -4,8 +4,10 @@ const fs = require('fs');
 
 const app = express();
 
-app.use(express.static('static'));
-app.set('static', __dirname + '/static');
+const STATIC_DIR = 'static';
+
+app.use(express.static(STATIC_DIR));
+app.set(STATIC_DIR, __dirname + '/' + STATIC_DIR);
     
 app.set('view engine', 'ejs');
 
@@ -19,11 +21,11 @@ app.get('/', (_, res) => {
 });
 
 app.get('/contact', (_, res) => {
-    res.send('/contact');
+    res.render('contact.ejs', {});
 });
 
 app.get('/about', (_, res) => {
-    res.send('/about');
+    res.render('about.ejs', {});
 });
 
 app.get('/blog/:id', (req, res) => {
