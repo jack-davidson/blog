@@ -2,7 +2,7 @@
     font-size: 25px;
     /*top: 0;*/
     display: grid;
-    grid-template-columns: auto 0.2fr 0.2fr;
+    grid-template-columns: auto 0.2fr 0.2fr 0.2fr;
     text-align: center;
     grid-template-rows: auto;
     position: -webkit-sticky;
@@ -18,9 +18,9 @@
     text-align: left;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .nav {
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 33% 33% 33%;
     }
 
     .title {
@@ -30,5 +30,23 @@
 
     .title .container {
         padding-left: 0%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .nav {
+        font-size: 15px;
+    }
+    .title {
+        font-size: 25px;
     }
 }

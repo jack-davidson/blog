@@ -20,6 +20,10 @@ app.get('/', (_, res) => {
     });
 });
 
+app.get('/portfolio', (_, res) => {
+    res.render('portfolio.ejs', {});
+});
+
 app.get('/contact', (_, res) => {
     res.render('contact.ejs', {});
 });
