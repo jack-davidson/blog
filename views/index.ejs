@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/blogs.css">
+    <link rel="stylesheet" href="css/blog.css">
 
     <script src="script.js"></script>
 </head>
@@ -18,7 +19,7 @@
     <div class="blogs">
         <% for (i = 0; i < blogs.length; i++) { %>
             <a href="/blog/<%= i %>">
-                <div class="card container" style="text-align: left">
+                <div class="card container" style="margin-top: 2%; text-align: left">
                     <%= blogs[i].title.slice(0, 30) %>
                     (<%= blogs[i].date %>)
                 </div>
