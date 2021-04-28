@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (_, res) => {
     fs.readdir('blogs', (_, files) => {
-        blogs = [];
+        var blogs = [];
         files.forEach((file) => {
             blogs.push({
                 title: path.basename(file, '.md'),
@@ -26,7 +26,7 @@ app.get('/', (_, res) => {
                 date: fs.statSync('blogs/' + file).ctime.toDateString()
             });
         });
-        res.render('index.ejs', blogs);
+        res.render('index.ejs', {blogs: blogs});
     });
 });
 
@@ -53,7 +53,7 @@ app.get('/blog/:id', (req, res) => {
             });
         });
         blog = blogs[req.params['id']];
-        res.render('blog.ejs', blog);
+        res.render('blog.ejs', {blog: blog});
     });
 });
 
