@@ -14,6 +14,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <%- include('nav') %>
     <div class="blogs">
         <% for (i = 0; i < blogs.length; i++) { %>
             <a href="/blog/<%= i %>">
