@@ -17,8 +17,9 @@
     <div class="blog card">
         <div style="padding: 5px 20px;">
             <%- blog.content %>
+            <br>
+            <%= blog.date.toDateString() %>
         </div>
-        <%= blog.date.toDateString() %>
     </div>
 </body>
 </html>
