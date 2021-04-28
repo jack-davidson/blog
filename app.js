@@ -50,7 +50,7 @@ app.get('/blog/:id', (req, res) => {
             blogs.push({
                 title: path.basename(file, '.md'),
                 content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8')),
-                date: fs.statSync('blogs/' + file).ctime.toDateString()
+                date: fs.statSync('blogs/' + file).ctime
             });
         });
         blogs.sort(function(a,b){
