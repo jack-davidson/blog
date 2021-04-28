@@ -19,7 +19,7 @@
         <% for (i = 0; i < blogs.length; i++) { %>
             <a href="/blog/<%= i %>">
                 <div class="card container" style="text-align: left">
-                    <%= blogs[i].title.slice(0, 30) %>
+                    <h1><%= blogs[i].title.slice(0, 30) %></h1>
                     (<%= blogs[i].date %>)
                 </div>
             </a>
