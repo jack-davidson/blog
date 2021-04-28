@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
+const markdown = require('markdown').markdown;
 
 const port = 3000;
 const hostname = 'localhost';
@@ -15,8 +17,15 @@ app.set(STATIC_DIR, __dirname + '/' + STATIC_DIR);
 app.set('view engine', 'ejs');
 
 app.get('/', (_, res) => {
-    fs.readFile('blogs.json', 'utf8', (_, data) => {
-        res.render('index.ejs', {blogs: JSON.parse(data)});
+    fs.readdir('blogs', (_, files) => {
+        blogs = [];
+        files.forEach((file) => {
+            blogs.push({
+                title: path.basename(file, '.md'),
+                content: markdown.parse(fs.readFileSync('blogs/' + file, 'utf8'))
+            });
+        });
+        res.render('index.ejs', blogs);
     });
 });
 
@@ -33,10 +42,16 @@ app.get('/about', (_, res) => {
 });
 
 app.get('/blog/:id', (req, res) => {
-    fs.readFile('blogs.json', 'utf8', (_, data) => {
-        id = req.params['id'];
-        blog = JSON.parse(data)[id];
-        res.render('blog.ejs', {blog: blog});
+    fs.readdir('blogs', (_, files) => {
+        blogs = [];
+        files.forEach((file) => {
+            blogs.push({
+                title: path.basename(file, '.md'),
+                content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8'))
+            });
+        });
+        blog = blogs[req.params['id']];
+        res.render('blog.ejs', blog);
     });
 });
 

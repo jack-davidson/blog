@@ -15,14 +15,8 @@
 <body>
     <%- include('nav') %>
     <div class="blog card">
-        <div class="container">
-            <div style="font-size: 25px">
-                <%= blog.title %> (<%= blog.date %>)
-            </div>
-            <br>
-            <div>
-                <%= blog.body %>
-            </div>
+        <div style="padding: 5px 20px;">
+            <%- blog.content %>
         </div>
     </div>
 </body>
