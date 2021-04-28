@@ -23,9 +23,10 @@ app.get('/', (_, res) => {
             blogs.push({
                 title: path.basename(file, '.md'),
                 content: markdown.parse(fs.readFileSync('blogs/' + file, 'utf8')),
-                date: fs.statSync('blogs/' + file).ctime.toDateString()
+                date: fs.statSync('blogs/' + file).ctime
             });
         });
+        blogs.sort(function(a,b){return b.date.getTime() - a.date.getTime()});
         res.render('index.ejs', {blogs: blogs});
     });
 });
@@ -51,6 +52,9 @@ app.get('/blog/:id', (req, res) => {
                 content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8')),
                 date: fs.statSync('blogs/' + file).ctime.toDateString()
             });
+        });
+        blogs.sort(function(a,b){
+            return new Date(b.date) - new Date(a.date);
         });
         blog = blogs[req.params['id']];
         res.render('blog.ejs', {blog: blog});
