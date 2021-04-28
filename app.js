@@ -2,6 +2,9 @@
 const express = require('express');
 const fs = require('fs');
 
+const port = 3000;
+const hostname = 'localhost';
+
 const app = express();
 
 const STATIC_DIR = 'static';
@@ -10,9 +13,6 @@ app.use(express.static(STATIC_DIR));
 app.set(STATIC_DIR, __dirname + '/' + STATIC_DIR);
     
 app.set('view engine', 'ejs');
-
-const port = 3000;
-const hostname = 'localhost';
 
 app.get('/', (_, res) => {
     fs.readFile('blogs.json', 'utf8', (_, data) => {
