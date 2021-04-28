@@ -22,7 +22,8 @@ app.get('/', (_, res) => {
         files.forEach((file) => {
             blogs.push({
                 title: path.basename(file, '.md'),
-                content: markdown.parse(fs.readFileSync('blogs/' + file, 'utf8'))
+                content: markdown.parse(fs.readFileSync('blogs/' + file, 'utf8')),
+                date: fs.statSync('blogs/' + file).ctime.toDateString()
             });
         });
         res.render('index.ejs', blogs);
@@ -47,7 +48,8 @@ app.get('/blog/:id', (req, res) => {
         files.forEach((file) => {
             blogs.push({
                 title: path.basename(file, '.md'),
-                content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8'))
+                content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8')),
+                date: fs.statSync('blogs/' + file).ctime.toDateString()
             });
         });
         blog = blogs[req.params['id']];
