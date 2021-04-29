@@ -26,7 +26,9 @@ app.get('/', (_, res) => {
                 date: fs.statSync('blogs/' + file).ctime
             });
         });
-        blogs.sort(function(a,b){return b.date.getTime() - a.date.getTime()});
+        blogs.sort(function(a,b){
+            return new Date(a.date) - new Date(b.date);
+        });
         res.render('index.ejs', {blogs: blogs});
     });
 });
@@ -54,7 +56,7 @@ app.get('/blog/:id', (req, res) => {
             });
         });
         blogs.sort(function(a,b){
-            return new Date(b.date) - new Date(a.date);
+            return new Date(a.date) - new Date(b.date);
         });
         blog = blogs[req.params['id']];
         res.render('blog.ejs', {blog: blog});

@@ -21,7 +21,7 @@
         Web Logs
     </div>
     <div class="blogs">
-        <% for (i = 0; i < blogs.length; i++) { %>
+        <% for (i = blogs.length - 1; i >= 0; i--) { %>
             <a href="/blog/<%= i %>">
                 <div class="card container" style="margin-top: 2%; text-align: left">
                     <%= blogs[i].title.slice(0, 30) %>
