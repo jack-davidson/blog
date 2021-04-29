@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/blogs.css">
     <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/container.css">
 </head>
 <body>
     <%- include('nav') %>
     <div class="blog card">
-        <div style="padding: 20px; padding-top: 5px;">
+        <div class="content-container">
             <%- blog.content %>
             <br>
             <%= blog.date.toDateString() %>

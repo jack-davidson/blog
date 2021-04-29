@@ -6,16 +6,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/blogs.css">
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/blogs.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/container.css">
 
     <script src="script.js"></script>
 </head>
 <body>
     <%- include('nav') %>
+    <div class="card container blog-title">
+        Web Logs
+    </div>
     <div class="blogs">
         <% for (i = 0; i < blogs.length; i++) { %>
             <a href="/blog/<%= i %>">
