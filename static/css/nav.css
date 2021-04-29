@@ -14,7 +14,7 @@
     background-color: #2E3440;
 }
 
-.title {
+.nav .nav-title {
     text-align: left;
 }
 
@@ -23,12 +23,12 @@
         grid-template-columns: 33% 33% 33%;
     }
 
-    .title {
+    .nav .nav-title {
         text-align: center;
         grid-column: 1/4;
     }
 
-    .title .container {
+    .nav .nav-title .container {
         padding-left: 0%;
     }
 }
@@ -37,7 +37,7 @@
     .nav {
         font-size: 20px;
     }
-    .title {
+    .nav .nav-title {
         font-size: 25px;
     }
 }
@@ -46,7 +46,7 @@
     .nav {
         font-size: 15px;
     }
-    .title {
+    .nav .nav-title {
         font-size: 25px;
     }
 }
