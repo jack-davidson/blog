@@ -18,13 +18,13 @@ app.set('view engine', 'ejs');
 
 function getBlogs(callback) {
     var blogs = [];
-
     fs.readdir('blogs', (_, files) => {
-        files.forEach((file) => {
+        files.forEach((fileName) => {
+            console.log(blogs);
             blogs.push({
-                title: path.basename(file, '.md'),
-                content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8')),
-                date: fs.statSync('blogs/' + file).ctime
+                title: path.basename(fileName, '.md'),
+                content: markdown.toHTML(fs.readFileSync('blogs/' + fileName, 'utf8')),
+                date: fs.statSync('blogs/' + fileName).ctime
             });
         });
         return callback(blogs.sort((a, b) => {
