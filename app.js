@@ -16,20 +16,38 @@ app.set(STATIC_DIR, __dirname + '/' + STATIC_DIR);
     
 app.set('view engine', 'ejs');
 
-app.get('/', (_, res) => {
+function getBlogs(callback) {
+    var blogs = [];
+
     fs.readdir('blogs', (_, files) => {
-        var blogs = [];
         files.forEach((file) => {
             blogs.push({
                 title: path.basename(file, '.md'),
-                content: markdown.parse(fs.readFileSync('blogs/' + file, 'utf8')),
+                content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8')),
                 date: fs.statSync('blogs/' + file).ctime
             });
         });
-        blogs.sort(function(a,b){
+        return callback(blogs.sort((a, b) => {
             return new Date(a.date) - new Date(b.date);
-        });
+        }));
+    });
+}
+
+function getBlog(id, callback) {
+    getBlogs((blogs) => {
+        return callback(blogs[id]);
+    });
+}
+
+app.get('/', (_, res) => {
+    getBlogs((blogs) => {
         res.render('index.ejs', {blogs: blogs});
+    });
+});
+
+app.get('/blog/:id', (req, res) => {
+    getBlog(req.params['id'], (blog) => {
+        res.render('blog.ejs', {blog: blog});
     });
 });
 
@@ -43,24 +61,6 @@ app.get('/contact', (_, res) => {
 
 app.get('/about', (_, res) => {
     res.render('about.ejs', {});
-});
-
-app.get('/blog/:id', (req, res) => {
-    fs.readdir('blogs', (_, files) => {
-        blogs = [];
-        files.forEach((file) => {
-            blogs.push({
-                title: path.basename(file, '.md'),
-                content: markdown.toHTML(fs.readFileSync('blogs/' + file, 'utf8')),
-                date: fs.statSync('blogs/' + file).ctime
-            });
-        });
-        blogs.sort(function(a,b){
-            return new Date(a.date) - new Date(b.date);
-        });
-        blog = blogs[req.params['id']];
-        res.render('blog.ejs', {blog: blog});
-    });
 });
 
 app.listen(port, hostname, () => {
