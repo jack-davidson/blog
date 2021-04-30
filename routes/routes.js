@@ -1,6 +1,6 @@
 const model = require('../models/blog.js');
 
-module.exports = (app) => {
+module.exports = (app, config) => {
     app.get('/', (_, res) => {
         model.getBlogs((blogs) => {
             res.render('index.ejs', {blogs: blogs});
@@ -18,7 +18,7 @@ module.exports = (app) => {
     });
 
     app.get('/contact', (_, res) => {
-        res.render('contact.ejs', {});
+        res.render('contact.ejs', config['contact']);
     });
 
     app.get('/about', (_, res) => {

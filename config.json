@@ -1,9 +1,17 @@
 {
+    "deployment": "development",
     "express": {
         "view engine": "ejs",
         "views": "templates"
     },
-    "static_dir": "public",
-    "port": 3000,
-    "hostname": "localhost"
+    "server": {
+        "static_dir": "public",
+        "port": 3000,
+        "hostname": "localhost"
+    },
+    "contact": {
+        "email": "jackmaverickdavidson@gmail.com",
+        "discord": "bogo-sort#0860",
+        "linkedin": "linkedin.com/jackmdavidson"
+    }
 }

@@ -1,17 +1,16 @@
 .nav {
     font-size: 25px;
-    /*top: 0;*/
     display: grid;
     grid-template-columns: auto 0.2fr 0.2fr 0.2fr;
     text-align: center;
     grid-template-rows: auto;
     position: -webkit-sticky;
-    /*position: sticky;*/
     background-color: #FFFFFF;
 }
 
 .nav .card {
     background-color: #2E3440;
+    color: #8FBCBB;
 }
 
 .nav .nav-title {
