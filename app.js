@@ -1,66 +1,27 @@
 #!/usr/bin/env node
 const express = require('express');
 const fs = require('fs');
-const path = require('path');
-const markdown = require('markdown').markdown;
 
-const port = 3000;
-const hostname = 'localhost';
+const routes = require('./routes/routes');
 
 const app = express();
 
-const STATIC_DIR = 'static';
+const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
-app.use(express.static(STATIC_DIR));
-app.set(STATIC_DIR, __dirname + '/' + STATIC_DIR);
-    
-app.set('view engine', 'ejs');
+expressConfig = config['express']
 
-function getBlogs(callback) {
-    var blogs = [];
-    fs.readdir('blogs', (_, files) => {
-        files.forEach((fileName) => {
-            blogs.push({
-                title: path.basename(fileName, '.md'),
-                content: markdown.toHTML(fs.readFileSync('blogs/' + fileName, 'utf8')),
-                date: fs.statSync('blogs/' + fileName).ctime
-            });
-        });
-        return callback(blogs.sort((a, b) => {
-            return new Date(a.date) - new Date(b.date);
-        }));
-    });
+for (property in expressConfig) {
+    app.set(property, expressConfig[property]);
 }
 
-function getBlog(id, callback) {
-    getBlogs((blogs) => {
-        return callback(blogs[id]);
-    });
-}
+app.use(express.static(config['static_dir']));
 
-app.get('/', (_, res) => {
-    getBlogs((blogs) => {
-        res.render('index.ejs', {blogs: blogs});
-    });
-});
+const port = config['port'];
+const hostname = config['hostname'];
 
-app.get('/blog/:id', (req, res) => {
-    getBlog(req.params['id'], (blog) => {
-        res.render('blog.ejs', {blog: blog});
-    });
-});
 
-app.get('/portfolio', (_, res) => {
-    res.render('portfolio.ejs', {});
-});
+routes(app);
 
-app.get('/contact', (_, res) => {
-    res.render('contact.ejs', {});
-});
-
-app.get('/about', (_, res) => {
-    res.render('about.ejs', {});
-});
 
 app.listen(port, hostname, () => {
     console.log(`blog listening at http://${hostname}:${port}`);
