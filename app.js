@@ -39,14 +39,16 @@ if ('deployment' in config) {
         app.use(express.static(serverConfig['static_dir']));
 }
 
+/* load express settings */
 expressConfig = config['express']
 for (property in expressConfig) {
     app.set(property, expressConfig[property]);
 }
 
-
+/* load routes, supply it with our express object and config */
 routes(app, config);
 
+/* run server on config.port and config.hostname */
 app.listen(port, hostname, () => {
     console.log(`blog listening at http://${hostname}:${port}`);
 });
