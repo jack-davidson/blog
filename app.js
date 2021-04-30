@@ -20,7 +20,6 @@ function getBlogs(callback) {
     var blogs = [];
     fs.readdir('blogs', (_, files) => {
         files.forEach((fileName) => {
-            console.log(blogs);
             blogs.push({
                 title: path.basename(fileName, '.md'),
                 content: markdown.toHTML(fs.readFileSync('blogs/' + fileName, 'utf8')),
