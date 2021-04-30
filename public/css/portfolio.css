@@ -1,0 +1,16 @@
+.portfolio {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #2e3440;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio {
+        width: 90%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
