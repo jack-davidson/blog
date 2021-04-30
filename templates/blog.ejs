@@ -20,7 +20,7 @@
         <div class="content-container">
             <%- blog.content %>
             <br>
-            <%= blog.date.toDateString() %>
+            <%= blog.date.toDateString().slice(3) %>
         </div>
     </div>
 </body>
