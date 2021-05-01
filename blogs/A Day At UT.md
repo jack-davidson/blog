@@ -22,9 +22,9 @@ items and accessories for online school. I brought my fountain pen and notebook.
 my laptop and a charger obviously among a few other items. I was fully ready to go to UT
 for a day.
 
-I drove to the school at about 7:10 in the morning.
+We drove to the school at about 7:10 in the morning.
 
-Once I arrived at UT I parked around the GDC (Gates-Dell Complex) and checked if it was open.
+Once I arrived at UT we parked around the GDC (Gates-Dell Complex) and checked if it was open.
 It was not. I fell back to the William C Powers Student Activity Center as mentioned earlier
 and sat down at a table to start work. There were a few UT students sitting around me and
 there didn't seem to be a problem. I don't think anyone would suspect somebody of being a
