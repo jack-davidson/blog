@@ -41,8 +41,8 @@ and that is where I completed my Integrated Physics and Chemistry period.
 
 Once it was 12:00 (essentially the start of my lunch period), lunch was a hard to obtain thing
 at the UT campus. The restaurants inside the Student Activity center looked long-closed and
-there wasn't anything on campus so I walked to the target across from the UT water fountain
-was. There was a really good Halal food truck and I got a Gyro. I then walked to the Yogurt bowl
+there wasn't anything on campus so I walked to the target across from the water fountain.
+There was a really good Halal food truck nearby and I got a Gyro. I then walked to the Yogurt bowl
 shop in the Gregory Gymnasium and got a Gatorade. I finished my lunch in the student activity
 center before my last period.
 
