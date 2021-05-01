@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
 
+    <title>Jack Davidson :: Home</title>
     <link rel="stylesheet" href="/css/card.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/nav.css">
@@ -23,7 +24,7 @@
         <% for (i = blogs.length - 1; i >= 0; i--) { %>
             <a href="/blog/<%= i %>">
                 <div class="card container" style="margin-top: 10px; text-align: left">
-                    <%= blogs[i].title %>
+                    <%- blogs[i].title %>
                 </div>
             </a>
         <% } %>

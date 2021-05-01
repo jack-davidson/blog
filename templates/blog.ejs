@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <title>Jack Davidson :: <%- blog.title.replace(/<[^>]*>/, '') %></title>
 
     <link rel="stylesheet" href="/css/card.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -19,7 +20,7 @@
         <div class="content-container">
             <%- blog.content %>
             <br>
-            <%= blog.date.toDateString() %>
+            <%= blog.date.toDateString().slice(3) %>
         </div>
     </div>
 </body>

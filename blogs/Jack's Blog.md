@@ -1,3 +1,4 @@
+date: Apr 29 2021
 # Jack's Blog
 
 Welcome to my blog! Here, I will blog about programming, system administration,
