@@ -1,8 +1,9 @@
+@import url("main.css");
+
 .blog {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    color: #2e3440;
     margin-top: 2%;
 }
 

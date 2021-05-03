@@ -1,3 +1,5 @@
+@import url("main.css");
+
 .nav {
     font-size: 25px;
     display: grid;
@@ -5,12 +7,11 @@
     text-align: center;
     grid-template-rows: auto;
     position: -webkit-sticky;
-    background-color: #FFFFFF;
 }
 
 .nav .card {
-    background-color: #2E3440;
-    color: #8FBCBB;
+    background-color: var(--fg);
+    color: var(--fg1);
 }
 
 .nav .nav-title {

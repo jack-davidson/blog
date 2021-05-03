@@ -1,6 +1,13 @@
+:root {
+  --fg1: #2e3440;
+  --bg: #2e3440;
+  --fg: #8fbcbb;
+}
+
 body {
     font-family: 'Roboto Mono', sans-serif;
-    color: #2E3440;
+    color: var(--fg);
+    background-color: var(--bg);
 }
 
 a {

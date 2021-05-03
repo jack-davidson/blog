@@ -1,5 +1,8 @@
+@import url("main.css");
+
 .card {
-    color: #2e3440;
+    color: var(--fg);
+    background-color: var(--bg);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
     margin: 5px;

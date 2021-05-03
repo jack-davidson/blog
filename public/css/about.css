@@ -1,8 +1,10 @@
+@import url("main.css");
+
 .about {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    color: #2e3440;
+    color: var(--fg);
     margin-top: 2%;
 }
 
