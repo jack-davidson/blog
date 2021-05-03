@@ -1,7 +1,14 @@
 :root {
+  /* dark mode: */
+  --fg: #8fbcbb;
   --fg1: #2e3440;
   --bg: #2e3440;
-  --fg: #8fbcbb;
+  --bg1: #3B4252;
+  /* light mode */
+  --fg: #2e3440;
+  --fg1: #8fbcbb;
+  --bg: #eceff4;
+  --bg1: #ffffff;
 }
 
 body {
