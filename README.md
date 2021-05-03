@@ -1,6 +1,6 @@
 # blog
 
-![](logo.png)
+![](nav.png)
 
 Newest version of my personal website/blog.
 
