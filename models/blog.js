@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const markdown = require('markdown').markdown;
+const markdownIt = require('markdown-it')();
 
 module.exports = {
     getBlogs: function (callback) {
@@ -14,7 +14,7 @@ module.exports = {
                  * 3) Get first line and remove <h1?> tag.
                  */
                 date = new Date(fileContent.split(/\r?\n/)[0].replace(/date:*/, ''));
-                body = markdown.toHTML(fileContent.replace(/date\:.*\n/, ''));
+                body = markdownIt.render(fileContent.replace(/date\:.*\n/, ''));
                 title = body.split(/\r?\n/)[0].replace(/<h1?>/, '');
                 blogs.push({
                     title: title,

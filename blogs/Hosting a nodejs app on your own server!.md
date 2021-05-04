@@ -69,7 +69,6 @@ on your system, run `lsblk`:
 
 ```
 $ lsblk
-
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda           8:0    1  14.3G  0 disk
 ├─sda1        8:1    1   337M  0 part
