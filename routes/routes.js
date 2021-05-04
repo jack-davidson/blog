@@ -13,6 +13,10 @@ module.exports = (app, config) => {
         });
     });
 
+    app.get('/git/:repo', (req, res) => {
+        res.redirect('https://github.com/jack-davidson/' + req.params['repo']);
+    });
+
     app.get('/portfolio', (_, res) => {
         res.render('portfolio.ejs', {});
     });
