@@ -3,47 +3,30 @@ const express = require('express');
 const fs = require('fs');
 const routes = require('./routes/routes');
 
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 const app = express();
 
-
-/* load server config from config, if nonexistent, use default config */
-var serverConfig;
-if ('server' in config)
-    serverConfig = config['server'];
-else {
-    serverConfig = {
-        static_dir: "public",
-        port: 3000,
-        hostname: "localhost"
-    };
+/* try to load config.json */
+var config;
+try {
+    config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+} catch (err) {
+    config = JSON.parse(fs.readFileSync('config.def.json', 'utf8'));
+    /* set default deployment value to development */
+    config['deployment'] = 'development';
 }
 
-/* load hostname number from config, if nonexistent, use default hostname */
-var port;
-if ('port' in serverConfig)
-    port = serverConfig['port'];
-else
-    port = 3000;
+/* if deployment mode is development, set up express static file serving with default
+ * directory as /public */
+config['deployment'] == 'development' ?
+    app.use(express.static(config['http']['static_dir'] || '/public')) : void(0);
 
-/* load hostname from config, if nonexistent, use default hostname */
-var hostname;
-if ('hostname' in serverConfig)
-    hostname = serverConfig['hostname'];
-else
-    hostname = "localhost";
+/* load all express settings */
+for (property in config['express'])
+    app.set(property, config['express'][property]);
 
-/* set up static dir if not in production */
-if ('deployment' in config) {
-    if (config['deployment'] == 'development')
-        app.use(express.static(serverConfig['static_dir']));
-}
-
-/* load express settings */
-expressConfig = config['express']
-for (property in expressConfig) {
-    app.set(property, expressConfig[property]);
-}
+/* get port and hostname config with default values */
+const port = config['http']['port'] || 3000;
+const hostname = config['http']['hostname'] || 'localhost';
 
 /* load routes, supply it with our express object and config */
 routes(app, config);

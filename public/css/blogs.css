@@ -7,6 +7,10 @@
     margin-left: auto;
 }
 
+.blogs a {
+    text-decoration: none;
+}
+
 .blog-title {
     margin-top: 25px;
     font-size: 25px;

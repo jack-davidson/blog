@@ -18,6 +18,5 @@ body {
 }
 
 a {
-    color: #2E3440;
-    text-decoration: none;
+    color: var(--fg);
 }

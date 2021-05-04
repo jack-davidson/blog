@@ -7,10 +7,14 @@ module.exports = (app, config) => {
         });
     });
 
-    app.get('/blog/:id', (req, res) => {
-        model.getBlog(req.params['id'], (blog) => {
-            res.render('blog.ejs', {blog: blog});
+    app.get('/blog/:title', (req, res) => {
+        model.getBlog(req.params['title'], (blog) => {
+            res.render('blog.ejs', {blog});
         });
+    });
+
+    app.get('/git/:repo', (req, res) => {
+        res.redirect('https://github.com/jack-davidson/' + req.params['repo']);
     });
 
     app.get('/portfolio', (_, res) => {
