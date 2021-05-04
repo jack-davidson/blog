@@ -15,9 +15,11 @@ our different elements will fit together with.
 ## Overview
 
 Here is a diagram of the app we are hosting:
+
 ```
 www <-- https://example.com --> nginx <-- http://localhost:3000 --> nodejs
 ```
+
 What this means is that we have the world wide web communicating
 with an nginx server. Nginx is a server application that acts
 as a reverse proxy *and* http web server. A reverse proxy can
