@@ -1,5 +1,5 @@
 date: May 4 2021
-# Hosting a nodejs app on your own server!
+# Hosting a nodejs app on your own server Part 1
 
 If you want to host webapps on your own physical server or
 a server in the cloud, the configuration may seem daunting.
@@ -98,7 +98,7 @@ to see a little status bar of how much we have written and how long it will
 take. This is optional but it is helpful to see how long you have left.
 
 Windows:
+TODO
 
 Mac OSX:
-
-This article is not yet finished. Please stay tuned!
+TODO
