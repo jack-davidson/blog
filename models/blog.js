@@ -27,9 +27,13 @@ module.exports = {
             }));
         });
     },
-    getBlog: function (id, callback) {
+    getBlog: function (title, callback) {
         this.getBlogs((blogs) => {
-            return callback(blogs[id]);
+            for (i = 0; i < blogs.length; i++) {
+                if (blogs[i].title.replace(/(<([^>]+)>)/, '').replace(/ /g, '_') == title) {
+                    return callback(blogs[i]);
+                }
+            }
         });
     }
 }
