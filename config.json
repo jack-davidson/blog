@@ -4,7 +4,7 @@
         "view engine": "ejs",
         "views": "templates"
     },
-    "server": {
+    "http": {
         "static_dir": "public",
         "port": 3000,
         "hostname": "localhost"
