@@ -1,5 +1,5 @@
 {
-    "deployment": "",
+    "deployment": "development",
     "express": {
         "view engine": "ejs",
         "views": "templates"
@@ -12,6 +12,6 @@
     "contact": {
         "email": "jackmaverickdavidson@gmail.com",
         "discord": "bogo-sort#0860",
-        "linkedin": "linkedin.com/jackmdavidson"
+        "linkedin": "https://linkedin.com/in/jackmdavidson"
     }
 }

@@ -33,5 +33,5 @@ routes(app, config);
 
 /* run server on config.port and config.hostname */
 app.listen(port, hostname, () => {
-    console.log(`blog listening at http://${port}:${port}`);
+    console.log(`blog listening at http://${hostname}:${port}`);
 });
