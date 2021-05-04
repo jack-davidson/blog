@@ -17,10 +17,6 @@ module.exports = (app, config) => {
         res.redirect('https://github.com/jack-davidson/' + req.params['repo']);
     });
 
-    app.get('/testing_documents', (req, res) => {
-        res.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-    });
-
     app.get('/portfolio', (_, res) => {
         res.render('portfolio.ejs', {});
     });
