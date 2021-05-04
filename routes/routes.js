@@ -18,7 +18,7 @@ module.exports = (app, config) => {
     });
 
     app.get('/testing_documents', (req, res) => {
-        res.redirect('https://youtube.com/https://youtu.be/dQw4w9WgXcQ');
+        res.redirect('https://youtube.com/dQw4w9WgXcQ');
     });
 
     app.get('/portfolio', (_, res) => {
