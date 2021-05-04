@@ -1,5 +1,5 @@
 {
-    "deployment": "development",
+    "deployment": "",
     "express": {
         "view engine": "ejs",
         "views": "templates"
