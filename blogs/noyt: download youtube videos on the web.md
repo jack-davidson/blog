@@ -9,7 +9,7 @@ I made to download youtube videos. I created and hosted it yesterday in about
 6 hours total. It took a little while to get the server configuration right.
 I was so relieved once I had gotten the hosting right. I hadn't registered
 another ssl certificate from let's encrypt and also I had messed up the
-`server\_name` and `listen` directives within my `noyt.jackdavidson.tech`
+`server_name` and `listen` directives within my `noyt.jackdavidson.tech`
 `server` block.
 
 It uses node and express.js. I spawn a `youtube-dl` process to download a
