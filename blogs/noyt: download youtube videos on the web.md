@@ -31,7 +31,7 @@ So! I thought of creating a web frontend for this program. Something fairly simp
 this is not winning any design awards but it works well.
 
 I am very happy with nodejs, express, nginx, and all of the other tools I have learned
-within the last week. I am a begginner at nodejs and this is my first time self hosting
+within the last week. I am a beginner at nodejs and this is my first time self hosting
 servers. Things are getting a lot easier to just *build* and not *think* about it for a
 long time before doing it--or just making big plans but not really making anything. If
 I could give any advice for making projects: Let It Flow Naturally and create something
