@@ -14,7 +14,7 @@ another ssl certificate from let's encrypt and also I had messed up the
 
 It uses node and express.js. I spawn a `youtube-dl` process to download a
 video to the `/public` directory and then I respond with a download on
-the frontend. This was a quite project and I will possibly make it look
+the frontend. This was a quick project and I will possibly make it look
 more 'pretty' soon.
 
 I created this project because my Integrated Physics and Chemistry
@@ -23,9 +23,9 @@ to watch a documentary by Jim Al-Khalili about the history of
 electricity. Some students were unable to access this video via
 youtube and the teacher had recorded the zoom meeting whilst watching
 this video. I thought this was suboptimal and recommended he use `youtube-dl`.
-I looked up how to install it on windows and I was quite dissapointed with the
-ease of installation. The teacher would have to install chocolatey to install
-pip to install dependencies and youtube-dl...
+I looked up how to install it on windows and it seemed quite hard to install
+for someone with not tech knowledge. The teacher would have to install
+chocolatey to install pip to install dependencies and youtube-dl...
 
 So! I thought of creating a web frontend for this program. Something fairly simple,
 this is not winning any design awards but it works well.
