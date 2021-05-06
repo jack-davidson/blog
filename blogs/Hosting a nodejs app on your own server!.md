@@ -23,8 +23,8 @@ www <-- https://example.com --> nginx <-- http://localhost:3000 --> nodejs
 What this means is that we have the world wide web communicating
 with an nginx server. Nginx is a server application that acts
 as a reverse proxy *and* http web server. A reverse proxy can
-forward clients to different web browsers depending on certain
-rules. An http web server is a program that allows conent to
+forward clients to different hosts depending on certain
+rules. An http web server is a program that allows content to
 be served over a network with the http protocol. With nginx, we
 can redirect responses to other ones and we can configure
 different rules for redirecting and responding for different
