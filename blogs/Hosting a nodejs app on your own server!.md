@@ -6,7 +6,7 @@ a server in the cloud, the configuration may seem daunting.
 There are many large programs you need to configure to get
 a web app running. This article is here to the rescue!
 
-So whenever we are administrating a server and trying to
+Whenever we are administrating a server and trying to
 install a new service, we need to plan how our components
 are going to interact. We need to plan what interfaces
 we are going to use and what channels of communication
