@@ -22,7 +22,7 @@ module.exports = (app, config) => {
     });
 
     app.get('/contact', (_, res) => {
-        res.render('contact.ejs', config['contact']);
+        res.render('contact.ejs', {contact: config['contact']});
     });
 
     app.get('/about', (_, res) => {
