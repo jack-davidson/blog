@@ -37,3 +37,5 @@ Now, type escape and then `wq` to save and quit `vi`.
 
 After custom homepage:
 ![CUSTOM HOMEPAGE](https://jackdavidson.tech/img/blog/qutebrowser_custom_homepage.png)
+
+Thank you for reading!
