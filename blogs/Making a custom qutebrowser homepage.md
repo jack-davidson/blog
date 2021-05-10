@@ -35,6 +35,18 @@ fit my dracula colorscheme of the rest of my system.
 
 Now, type escape and then `wq` to save and quit `vi`.
 
+The last thing you need to do to finalize this custom homepage is to add the following lines
+to `~/.config/qutebrowser/config.py`:
+```py
+c.url.default_page = "file:///home/*user*/.config/qutebrowser/homepage.html"
+c.url.start_pages = "file:///home/*user*/.config/qutebrowser/homepage.html"
+```
+Making sure to change *user* to your username.
+
+This configures our home page to be the html we wrote earlier.
+
+Now we are done!
+
 After custom homepage:
 ![CUSTOM HOMEPAGE](https://jackdavidson.tech/img/blog/qutebrowser_custom_homepage.png)
 
