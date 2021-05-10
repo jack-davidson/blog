@@ -19,11 +19,14 @@
     <div class="card contact">
         <div class="content-container">
             <h1>Contact</h1>
-            <b>mail</b>: <%= email %>
-            <br>
-            <b>discord</b>: <%= discord %>
-            <br>
-            <b>linkedin</b>: <a href="<%= linkedin %>">jackmdavidson</a>
+            <% for (key in contact) { %>
+                <% if (contact[key].match(/https?/)) { %>
+                    <b><%= key %></b>: <a href="<%= contact[key] %>" ><%= contact[key].replace(/https?\:\/\//, '') %></a>
+                <% } else { %>
+                    <b><%= key %></b>: <%= contact[key] %>
+                <% }; %>
+                <br>
+            <% }; %>
             </div>
         </div>
     </div>
