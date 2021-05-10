@@ -1,3 +1,4 @@
+date: May 10 2021
 # Setting up Minimal Notifications
 
 I recently switched my mail client from the default gmail web client to [thunderbird](https://www.thunderbird.net/en-US/).
@@ -48,3 +49,10 @@ Now, you can put a command to display something with dunst:
 `/usr/bin/notify-send "mail from %sendername" "%subject""`
 
 This will show the sender and subject with dunst.
+
+It should look like this:
+![mail alert config](https://jackdavidson.tech/img/blog/mail_alert_configuration.png)
+
+Now you have notifications! Try sending an email to yourself to test it out!
+
+Thank you so much for reading!
