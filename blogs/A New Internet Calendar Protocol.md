@@ -1,4 +1,4 @@
-date: May 12
+date: May 12 2021
 # A New Internet Calendar Protocol?
 Recently I have started to incorporate electronic calendars into my daily workflow and have started
 scheduling tasks and other events I have planned. My previous system was a whiteboard that I would write
