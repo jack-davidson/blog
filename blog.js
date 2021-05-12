@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const markdownIt = require('markdown-it')();
+const striptags = require('striptags');
 
 module.exports = {
     getBlogs: function (callback) {
@@ -11,11 +12,11 @@ module.exports = {
                 /* 
                  * 1) Get date from first line of fileContent and remove the date key.
                  * 2) Get body and remove date key and convert to html.
-                 * 3) Get first line and remove <h1?> tag.
+                 * 3) Get first line and remove h1 tags.
                  */
                 date = new Date(fileContent.split(/\r?\n/)[0].replace(/date:*/, ''));
                 body = markdownIt.render(fileContent.replace(/date\:.*\n/, ''));
-                title = body.split(/\r?\n/)[0].replace(/<h1?>/, '');
+                title = body.split(/\r?\n/)[0].replace(/\/?<h1\/?>/, '');
                 blogs.push({
                     title: title,
                     content: body,
@@ -30,7 +31,7 @@ module.exports = {
     getBlog: function (title, callback) {
         this.getBlogs((blogs) => {
             for (i = 0; i < blogs.length; i++) {
-                if (blogs[i].title.replace(/(<([^>]+)>)/, '').replace(/ /g, '_') == title) {
+                if (striptags(blogs[i].title).replace(/ /g, '_') == title) {
                     return callback(blogs[i]);
                 }
             }
