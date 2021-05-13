@@ -1,4 +1,4 @@
-const model = require('../models/blog.js');
+const model = require('./blog.js');
 
 module.exports = (app, config) => {
     app.get('/', (_, res) => {
