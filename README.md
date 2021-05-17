@@ -1,6 +1,6 @@
 # blog
 
-![](nav.png)
+![](public/img/doc/nav.png)
 
 Newest version of my personal website/blog.
 
@@ -37,4 +37,4 @@ blog listening at http://localhost:3000
 ```
 
 You can point your web browser to `http://localhost:3000` and the blog will be there!
-![](blog.png)
+![](public/img/doc/blog.png)
