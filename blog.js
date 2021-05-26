@@ -3,6 +3,10 @@ const path = require('path');
 const markdownIt = require('markdown-it')();
 const striptags = require('striptags');
 
+/*
+ * Retrieve Blog(s) from fs.
+ */
+
 module.exports = {
     getBlogs: function (callback) {
         var blogs = [];
