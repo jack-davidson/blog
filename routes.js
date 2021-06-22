@@ -29,6 +29,10 @@ module.exports = (app, config) => {
         res.render('portfolio.ejs', {});
     });
 
+    app.get('/resume', (_, res) => {
+        res.redirect('https://docs.google.com/document/d/e/2PACX-1vSb5GkR9ckGq5BEX-TStSNNPlGNkA9f--eHORQ1YYJKX_F_BafyTvmQtpwVGGzwhnCYbZknLcTda0cD/pub');
+    });
+
     /* Render Contact Page. */
     app.get('/contact', (_, res) => {
         res.render('contact.ejs', {contact: config['contact']});
