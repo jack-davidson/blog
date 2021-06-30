@@ -26,16 +26,18 @@ a {
 pre {
     background-color: var(--bg);
     border-radius: 5px;
-    padding-right: 5px;
     padding: 5px;
     color: var(--code);
 }
 
 code {
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 90%;
     background-color: var(--bg);
-    font-size: 110%;
     border-radius: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
     color: var(--code);
+}
+
+p code {
+    padding: 2px;
 }
