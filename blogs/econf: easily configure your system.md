@@ -14,7 +14,7 @@ Thanks for reading!
 
 
 ```
- ~/repos/jd/config::(master) > econf
+~/repos/jd/config::(master) > econf
 /home/jd/repos/jd/config/qutebrowser -> /home/jd/.config/qutebrowser
 /home/jd/repos/jd/config/fontconfig -> /home/jd/.config/fontconfig
 /home/jd/repos/jd/config/nvim -> /home/jd/.config/nvim
