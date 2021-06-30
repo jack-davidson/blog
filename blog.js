@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const markdownIt = require('markdown-it')();
 const striptags = require('striptags');
 
