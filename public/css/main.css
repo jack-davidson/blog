@@ -9,6 +9,8 @@
   --fg1: #2e3440;
   --bg: #2e3440;
   --bg1: #3B4252;
+
+  --code: #A3BE8C;
 }
 
 body {
@@ -19,4 +21,21 @@ body {
 
 a {
     color: var(--fg);
+}
+
+pre {
+    background-color: var(--bg);
+    border-radius: 5px;
+    padding-right: 5px;
+    padding: 5px;
+    color: var(--code);
+}
+
+code {
+    background-color: var(--bg);
+    font-size: 110%;
+    border-radius: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: var(--code);
 }
