@@ -30,6 +30,7 @@ module.exports = (app, config) => {
     });
 
     app.get('/resume', (_, res) => {
+        /* redirect to google docs resume url */
         res.redirect('https://docs.google.com/document/d/e/2PACX-1vSb5GkR9ckGq5BEX-TStSNNPlGNkA9f--eHORQ1YYJKX_F_BafyTvmQtpwVGGzwhnCYbZknLcTda0cD/pub');
     });
 
