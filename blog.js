@@ -8,7 +8,7 @@ const striptags = require('striptags');
 
 module.exports = {
     getBlogs: function (callback) {
-        var blogs = [];
+        let blogs = [];
         fs.readdir('blogs', (_, files) => {
             files.forEach((fileName) => {
                 fileContent = fs.readFileSync('blogs/' + fileName, 'utf8');
@@ -31,6 +31,7 @@ module.exports = {
             }));
         });
     },
+
     getBlog: function (title, callback) {
         this.getBlogs((blogs) => {
             for (i = 0; i < blogs.length; i++) {

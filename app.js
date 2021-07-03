@@ -5,7 +5,7 @@ const routes = require('./routes');
 
 const app = express();
 
-var config;
+let config;
 try {
     config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 } catch (err) {
