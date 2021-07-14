@@ -28,6 +28,10 @@ pre {
     border-radius: 5px;
     padding: 5px;
     color: var(--code);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+    overflow: hidden;
 }
 
 code {
