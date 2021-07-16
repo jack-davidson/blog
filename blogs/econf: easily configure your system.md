@@ -3,7 +3,7 @@ date: May 30 2021
 Hello, I just finished up a program called econf. econf allows you to
 deploy configuration files automatically with a special configuration language.
 
-You can check out the project at [](https://github.com/jack-davidson/econf).
+You can check out the project [here](https://github.com/jack-davidson/econf).
 
 When you are in a directory with an econf config file, you just have to run econf
 and all of the config files get symlinked and other directives are executed.
