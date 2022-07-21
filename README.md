@@ -2,7 +2,7 @@
 
 ![](public/img/doc/nav.png)
 
-Newest version of my personal website/blog.
+~~Newest version~~ of my personal website/blog.
 
 ## installation
 This blog is very simple to install, as of the writing of this guide (May 03),
